@@ -1,8 +1,6 @@
-This directory should contain the following utility-related files:
+
 * `helpers.py` - Miscellaneous helper functions
 * `util_config.py` - Common configuration options for all utilities
-
-Each utility should be in its own sub-directory, along with its configuration file, as follows:
 
 /archive
 * `archive.py` - Archives free user result files to Glacier
