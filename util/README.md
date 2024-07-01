@@ -18,5 +18,3 @@
 * `thaw.py` - Saves recently restored archive(s) to S3
 * `thaw_config.ini` - Configuration options for thaw utility
 
-If you completed Ex. 14, include your annotator load testing script here
-* `ann_load.py` - Annotator load testing script
