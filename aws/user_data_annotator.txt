@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# copy the web server code from the S3 bucket
+aws s3 cp s3://mpcs-cc-students/txin/gas.zip /home/ec2-user/mpcs-cc
+
+# unzip the web server code
+unzip /home/ec2-user/mpcs-cc/gas.zip -d /home/ec2-user/mpcs-cc
+
+# change the ownership of the web server code to ec2-user:ec2-user
+chown -R ec2-user:ec2-user /home/ec2-user/mpcs-cc/gas/
+
+# start the web server in tmux session --"&" stand for background process
+chmod +x /home/ec2-user/mpcs-cc/gas/ann/run_ann.sh
+sudo -u ec2-user /home/ec2-user/mpcs-cc/gas/ann/run_ann.sh &
